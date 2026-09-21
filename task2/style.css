@@ -1,0 +1,523 @@
+/* ============================================================
+   СБРОС И БАЗА
+   ============================================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #1a1a2e;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ============================================================
+   MOBILE FIRST — базовые стили для мобильного
+   ============================================================ */
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* ---------- Шапка ---------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #e85d2f;
+}
+
+.nav {
+    display: none; /* на мобильном меню скрыто */
+}
+
+.search-btn {
+    display: none; /* на мобильном поиск скрыт */
+}
+
+.burger {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 26px;
+    padding: 8px 12px;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-height: 500px;
+    margin-top: 15px;
+    padding: 25px 20px;
+    border-radius: 12px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+        url("img/hero.jpg") center/cover no-repeat;
+}
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.play-btn {
+    width: 50px;
+    height: 50px;
+    min-width: 44px;
+    min-height: 44px;
+    margin-top: 15px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.play-btn:hover {
+    background: #e85d2f;
+    transform: scale(1.1);
+}
+
+.hero-slider {
+    display: none; /* на мобильном цифры скрыты */
+}
+
+.hero-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-self: end;
+}
+
+.hero-card p {
+    font-size: 13px;
+    color: #ddd;
+    margin-bottom: 6px;
+}
+
+.more {
+    display: inline-block;
+    color: #e85d2f;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.more:hover {
+    color: #fff;
+}
+
+/* ---------- Популярные туры ---------- */
+.tours {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.tours-sub {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.tours h2 {
+    font-size: 22px;
+    letter-spacing: 4px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.tour-card {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tour-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(232, 93, 47, 0.3);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.tour-card h3 {
+    padding: 15px 15px 5px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.tour-card p {
+    padding: 0 15px 18px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* ---------- Inspire ---------- */
+.inspire {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 40px 0;
+    align-items: center;
+}
+
+.inspire h2 {
+    font-size: 34px;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.video-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    min-height: 44px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 13px;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.video-btn:hover {
+    background: #e85d2f;
+    border-color: #e85d2f;
+}
+
+.video-icon {
+    font-size: 10px;
+}
+
+.inspire p {
+    font-size: 13px;
+    color: #aaa;
+    max-width: 500px;
+}
+
+.inspire-right {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.inspire-right img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ---------- Форма ---------- */
+.contact {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 22px;
+    letter-spacing: 4px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px 18px;
+    min-height: 44px;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #e85d2f;
+    box-shadow: 0 0 0 3px rgba(232, 93, 47, 0.2);
+}
+
+.contact-form button {
+    padding: 16px 24px;
+    min-height: 44px;
+    background: #e85d2f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.contact-form button:hover {
+    background: #c94a20;
+    transform: scale(1.02);
+}
+
+/* ---------- Футер ---------- */
+.footer {
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 13px;
+    color: #666;
+}
+
+/* ============================================================
+   ПЛАНШЕТ: min-width 768px
+   ============================================================ */
+@media (min-width: 768px) {
+    .page {
+        padding: 25px;
+    }
+
+    /* Показываем меню, прячем бургер */
+    .nav {
+        display: flex;
+        gap: 22px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    .nav a {
+        transition: color 0.2s;
+    }
+
+    .nav a:hover {
+        color: #e85d2f;
+    }
+
+    .search-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 35px 30px;
+    }
+
+    .hero h1 {
+        font-size: 72px;
+    }
+
+    /* Показываем цифры 01–05 */
+    .hero-slider {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 14px;
+        color: #888;
+        text-align: right;
+    }
+
+    .hero-slider .active {
+        color: #fff;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+    }
+
+    .hero-slider .active::before {
+        content: "";
+        width: 40px;
+        height: 2px;
+        background: #e85d2f;
+    }
+
+    /* 3 текстовых блока в ряд */
+    .hero-bottom {
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .hero-card {
+        flex: 1;
+    }
+
+    .tours {
+        padding: 60px 0;
+    }
+
+    .tours h2 {
+        font-size: 28px;
+    }
+
+    /* Туры: 2 колонки */
+    .tours-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .inspire {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+        padding: 60px 0;
+    }
+
+    .inspire h2 {
+        font-size: 46px;
+    }
+
+    .inspire-right {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact h2 {
+        font-size: 26px;
+    }
+}
+
+/* ============================================================
+   ДЕСКТОП: min-width 1200px
+   ============================================================ */
+@media (min-width: 1200px) {
+    .page {
+        padding: 30px 40px;
+    }
+
+    .hero {
+        min-height: 700px;
+        padding: 45px 40px;
+    }
+
+    .hero h1 {
+        font-size: 96px;
+    }
+
+    .hero-slider {
+        font-size: 16px;
+        gap: 14px;
+    }
+
+    .tours {
+        padding: 80px 0;
+    }
+
+    .tours h2 {
+        font-size: 32px;
+    }
+
+    /* Туры: 4 колонки */
+    .tours-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    .inspire {
+        padding: 80px 0;
+        gap: 50px;
+    }
+
+    .inspire h2 {
+        font-size: 56px;
+    }
+
+    .inspire-right img {
+        height: 220px;
+    }
+
+    .contact {
+        padding: 80px 0;
+    }
+}

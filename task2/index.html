@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel — Visit Tokyo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+
+        <!-- ============ ШАПКА ============ -->
+        <header class="header">
+            <a href="#" class="logo">TRAVEL</a>
+
+            <nav class="nav">
+                <a href="#hero">Главная</a>
+                <a href="#">Очки</a>
+                <a href="#tours">Туры</a>
+                <a href="#">Галерея</a>
+                <a href="#">Отзывы</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+
+            <button class="search-btn" aria-label="Поиск">🔍</button>
+            <button class="burger" aria-label="Меню">☰</button>
+        </header>
+
+        <!-- ============ ГЕРОЙ ============ -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1>VISIT<br>TOKYO</h1>
+                    <button class="play-btn" aria-label="Смотреть видео">▶</button>
+                </div>
+
+                <ul class="hero-slider">
+                    <li>01</li>
+                    <li>02</li>
+                    <li class="active">03</li>
+                    <li>04</li>
+                    <li>05</li>
+                </ul>
+            </div>
+
+            <div class="hero-bottom">
+                <article class="hero-card">
+                    <p>Твой незабываемый тур в мир мечты, незабываемый отдых и путешествие.</p>
+                    <a href="#" class="more">подробнее →</a>
+                </article>
+                <article class="hero-card">
+                    <p>Твой незабываемый тур в мир мечты, незабываемый отдых и путешествие.</p>
+                    <a href="#" class="more">подробнее →</a>
+                </article>
+                <article class="hero-card">
+                    <p>Твой незабываемый тур в мир мечты, незабываемый отдых и путешествие.</p>
+                    <a href="#" class="more">подробнее →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ ПОПУЛЯРНЫЕ ТУРЫ ============ -->
+        <section class="tours" id="tours">
+            <p class="tours-sub">и получите незабываемые эмоции</p>
+            <h2>ПОПУЛЯРНЫЕ ТУРЫ</h2>
+
+            <div class="tours-grid">
+                <article class="tour-card">
+                    <img src="img/tour1.jpg" alt="Тур 1">
+                    <h3>ТУР №1</h3>
+                    <p>и получите незабываемое</p>
+                </article>
+                <article class="tour-card">
+                    <img src="img/tour2.jpg" alt="Тур 2">
+                    <h3>ТУР №2</h3>
+                    <p>и получите незабываемое</p>
+                </article>
+                <article class="tour-card">
+                    <img src="img/tour3.jpg" alt="Тур 3">
+                    <h3>ТУР №3</h3>
+                    <p>и получите незабываемое</p>
+                </article>
+                <article class="tour-card">
+                    <img src="img/tour4.jpg" alt="Тур 4">
+                    <h3>ТУР №4</h3>
+                    <p>и получите незабываемое</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ TRAVEL AND INSPIRE ============ -->
+        <section class="inspire">
+            <div class="inspire-left">
+                <h2>TRAVEL AND<br>INSPIRE YOUR<br>LIFE</h2>
+                <button class="video-btn">
+                    <span class="video-icon">▶</span>
+                    Смотреть видео
+                </button>
+                <p>Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности влечёт за собой процесс внедрения и модернизации.</p>
+            </div>
+
+            <div class="inspire-right">
+                <img src="img/inspire1.jpg" alt="Пейзаж 1">
+                <img src="img/inspire2.jpg" alt="Пейзаж 2">
+            </div>
+        </section>
+
+        <!-- ============ ФОРМА ОБРАТНОЙ СВЯЗИ ============ -->
+        <section class="contact" id="contact">
+            <h2>СВЯЖИТЕСЬ С НАМИ</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" rows="5" placeholder="Сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+        <!-- ============ ФУТЕР ============ -->
+        <footer class="footer">
+            <p>© 2026 TRAVEL. Все права защищены.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
