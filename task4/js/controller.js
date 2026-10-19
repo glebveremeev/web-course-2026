@@ -34,10 +34,10 @@ export function handleCheck() {
 
     render(state);
 
-    if (bulls === 4) {
+       if (bulls === 4) {
         state.gameOver = true;
         const secretStr = state.secret.join('');
-        showMessage(`Победа! Угадано за ${state.attempts} попыток`, 'win');
+        showMessage(`Победа! Число было: ${secretStr}. Угадано за ${state.attempts} попыток`, 'win');
         blockInput(true);
     }
 }
