@@ -18,7 +18,7 @@ export function generateSecret() {
 
 export function validateGuess(value) {
     if (!/^\d{6}$/.test(value)) {
-        return { ok: false, error: 'Нужно ровно 4 цифры' };
+        return { ok: false, error: 'Нужно ровно 4 цифры1' };
     }
     const digits = value.split('');
     const unique = new Set(digits);
