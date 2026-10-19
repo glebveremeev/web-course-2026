@@ -17,7 +17,7 @@ export function generateSecret() {
 }
 
 export function validateGuess(value) {
-    if (!/^\d{4}$/.test(value)) {
+    if (!/^\d{6}$/.test(value)) {
         return { ok: false, error: 'Нужно ровно 4 цифры' };
     }
     const digits = value.split('');
