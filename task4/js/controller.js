@@ -36,6 +36,7 @@ export function handleCheck() {
 
     if (bulls === 4) {
         state.gameOver = true;
+        const secretStr = state.secret.join('');
         showMessage(`Победа! Угадано за ${state.attempts} попыток`, 'win');
         blockInput(true);
     }
