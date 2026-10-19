@@ -7,7 +7,7 @@ export const state = {
 
 export function generateSecret() {
     const digits = [];
-    while (digits.length < 4) {
+    while (digits.length < 6) {
         const d = String(Math.floor(Math.random() * 10));
         if (!digits.includes(d)) {
             digits.push(d);
@@ -22,7 +22,7 @@ export function validateGuess(value) {
     }
     const digits = value.split('');
     const unique = new Set(digits);
-    if (unique.size !== 4) {
+    if (unique.size !== 6) {
         return { ok: false, error: 'Цифры не должны повторяться' };
     }
     return { ok: true, digits };

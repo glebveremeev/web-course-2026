@@ -34,7 +34,7 @@ export function handleCheck() {
 
     render(state);
 
-       if (bulls === 4) {
+       if (cows === 3) {
         state.gameOver = true;
         const secretStr = state.secret.join('');
         showMessage(`Победа! Число было: ${secretStr}. Угадано за ${state.attempts} попыток`, 'win');
