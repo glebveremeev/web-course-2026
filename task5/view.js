@@ -3,6 +3,19 @@ export const startBtn = document.getElementById('start-btn');
 export const levelEl = document.getElementById('level');
 export const bestEl = document.getElementById('best');
 export const message = document.getElementById('message');
+export const AudioContext = window.AudioContext || window.webkitAudioContext;
+
+let audioCtx = null;
+
+export function playSound() {
+ if (!audioCtx) { audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+const oscillator = audioCtx.createOscillator();
+oscillator.type = 'square';
+oscillator.frecquansy.value = 600;
+oscillator.connect(audioCtx.destination);
+oscillator.start();
+oscillator.stop(audioCtx.currenttime + 0.1);
 
 export function showMessage(text, type = '') {
     message.textContent = text;
