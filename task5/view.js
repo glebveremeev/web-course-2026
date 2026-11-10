@@ -12,10 +12,10 @@ export function playSound() {
     }
 const oscillator = audioCtx.createOscillator();
 oscillator.type = 'square';
-oscillator.frecquansy.value = 600;
+oscillator.frequansy.value = 600;
 oscillator.connect(audioCtx.destination);
 oscillator.start();
-oscillator.stop(audioCtx.currenttime + 0.1);
+oscillator.stop(audioCtx.currentTime + 0.1);
 
 export function showMessage(text, type = '') {
     message.textContent = text;
